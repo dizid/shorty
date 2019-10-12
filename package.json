@@ -1,0 +1,31 @@
+{
+  "name": "short.url.vue.firestore",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "firebase": "^5.7.2",
+    "thum.io": "^1.0.8",
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1",
+    "vuefire": "^1.4.5"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^3.1.1",
+    "dotenv": "^8.1.0",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
