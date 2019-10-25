@@ -1,6 +1,6 @@
 <template>
    <div class="container">
-     <div class="box has-background-warning is-size-3">
+     <div class="box has-background-warning is-size-4">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>

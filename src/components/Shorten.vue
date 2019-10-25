@@ -14,8 +14,8 @@
   <button type="submit" class="button is-primary">Shorten</button><br>
  </form>
 
- <div class="tile is-child box">
 
+ <div v-if="showhideShortBox" class="tile is-child box">
 <!-- <h1 class="title">Your short URL: <strong>{{ short_url }}</strong></h1> -->
   <div class="field">
   <div class="control">
@@ -25,6 +25,9 @@
   </div>
 <button class="button is-primary" v-on:click="copy2Clipboard()">Copy short URL</button>
     </div>
+
+
+
   </div>
    </div>
   <div class="tile is-4 is-vertical is-parent">
@@ -52,8 +55,12 @@ export default {
      name: 'Shorten',
   data () {
     return {
-      long_url: '', random_string: '', short_url: ''
+      long_url: '', 
+      random_string: '', 
+      short_url: '',
+      showhideShortBox: ''
     }
+    
 },
 methods: {
 // Create short URL, add short & long to Firestore and return short_url
@@ -70,7 +77,10 @@ const createdAt = new Date()
 let short_url= this.short_url
 urlRef.add({ long_url, random_string, createdAt }) // All added to Firestore
 console.log("URL Saved to Firestore")
+ this.showhideShortBox = true
+ console.log("MF: showhideShortBox value: ", showhideShortBox)
  return this.short_url
+
       }
         })
       },
