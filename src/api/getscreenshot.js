@@ -1,0 +1,1 @@
+// Receive siteURL, get screen through thum.io and return screenshotURL
