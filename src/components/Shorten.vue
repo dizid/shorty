@@ -65,7 +65,7 @@ var urlRef = db.collection('urls')
      .then(snapshot => {
     if (snapshot.empty) {
 this.short_url = 'https://tnxz.nl/' + random_string // PROD
-  //this.short_url = 'localhost:8080/' + random_string // DEV
+// this.short_url = 'localhost:8080/' + random_string // DEV
 const createdAt = new Date()
 let short_url= this.short_url
 urlRef.add({ long_url, random_string, createdAt }) // All added to Firestore
