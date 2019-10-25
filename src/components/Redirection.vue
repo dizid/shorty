@@ -57,6 +57,6 @@ reDirect: function(newlocation) {
       },
 
 getScreenshot: function(newlocation) {
-this.thescreenshot = '//image.thum.io/get/auth/5745/' + this.newlocation
+this.thescreenshot = '//image.thum.io/get/' + this.newlocation
 }}}
 </script>
