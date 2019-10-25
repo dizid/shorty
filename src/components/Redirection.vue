@@ -1,17 +1,35 @@
 <template>
-<div>
+<div class="container">
+
+
+ 
+  <div class="tile is-parent is-vertical">
+  
+    <div class="tile is-child box">
+
 <h1 v-if="error">There was an error:</h1>
 <p> {{ error }}</p>
 <h1 class="is-size-3">You are going to this URL:</h1>
 <h2 class="is-size-5 has-text-danger"><a :href="newlocation">{{ newlocation }}</a> </h2>
 <button class="button is-primary" v-on:click="reDirect(newlocation)">Go!</button>
-<div>
+
+</div>
+
+  
+
+<div class="tile is-child box">
   <h2 class="is-size-3">A preview of this website:</h2>
+  <div class="box">
  <a :href="newlocation"><img :src="thescreenshot" alt="Preview screenshot of the site that you are going too"></a> 
 </div>
-<div>
 </div>
-</div>
+
+</div></div>
+
+
+
+
+
 </template>
 <script>
 import { db } from '../main'

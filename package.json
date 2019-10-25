@@ -4,9 +4,13 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "css-build": "node-sass --omit-source-map-url src/sass/mfstyles.scss public/mfstyles.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
   },
   "dependencies": {
+    "bulma": "^0.8.0",
     "firebase": "^5.7.2",
     "thum.io": "^1.0.8",
     "vue": "^2.5.17",
@@ -16,6 +20,7 @@
   "devDependencies": {
     "@vue/cli-service": "^3.1.1",
     "dotenv": "^8.1.0",
+    "node-sass": "^4.13.0",
     "vue-template-compiler": "^2.5.17"
   },
   "postcss": {

@@ -1,31 +1,22 @@
 <template>
-  <div id="app">
-    <div id="nav">
+   <div class="container">
+     <div class="box has-background-warning">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view></router-view>
+ <router-view></router-view>
+   <div class="content has-text-centered">
+    <img src="./assets/empty.png">
+    <p>
+      <strong>Tnxz.nl</strong> by <a href="https://dizid.com">Dizid</a>. 
+    </p>
+  </div>
+
   </div>
 </template>
 
+ 
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

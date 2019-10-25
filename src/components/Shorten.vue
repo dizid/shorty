@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="container">
 <div class="tile is-ancestor">
   <div class="tile is-parent">
     <div class="tile is-child box">
@@ -11,8 +11,11 @@
   <input class="input is-primary" v-model.trim="long_url" type="url" placeholder="Type or paste your long URL here!" required>
     </div>
   </div>
-  <button type="submit" class="button is-primary">Shorten</button>
+  <button type="submit" class="button is-primary">Shorten</button><br>
  </form>
+
+ <div class="tile is-child box">
+
 <!-- <h1 class="title">Your short URL: <strong>{{ short_url }}</strong></h1> -->
   <div class="field">
   <div class="control">
@@ -23,6 +26,7 @@
 <button class="button is-primary" v-on:click="copy2Clipboard()">Copy short URL</button>
     </div>
   </div>
+   </div>
   <div class="tile is-4 is-vertical is-parent">
     <div class="tile is-child box">
       <p class="title">tnxz.nl</p>
@@ -38,6 +42,7 @@
         This service is provided without warranty of any kind.</p>
     </div>
   </div>
+</div>
 </div>
 </div>
 </template>
@@ -59,8 +64,8 @@ var urlRef = db.collection('urls')
   urlRef.where('random_string', '==', random_string).get()
      .then(snapshot => {
     if (snapshot.empty) {
-this.short_url = 'https://tnxz.nl/' + random_string // PROD
- // this.short_url = 'localhost:8080/' + random_string // DEV
+// this.short_url = 'https://tnxz.nl/' + random_string // PROD
+  this.short_url = 'localhost:8080/' + random_string // DEV
 const createdAt = new Date()
 let short_url= this.short_url
 urlRef.add({ long_url, random_string, createdAt }) // All added to Firestore
